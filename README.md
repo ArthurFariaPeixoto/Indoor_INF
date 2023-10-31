@@ -1,4 +1,4 @@
-# Indoor_INF
+# Indoor INF
 
 Projeto conjunto entre as matérias de Padrões de Arquitetura de Software e Software para computação Ubiqua.
 
