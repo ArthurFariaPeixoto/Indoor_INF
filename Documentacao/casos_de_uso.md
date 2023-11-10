@@ -18,17 +18,6 @@ Então o Indoor INF apresenta a tela com as funcionalidades disponíveis para o 
 
 ```
 ```
-Funcionalidade: FG01b - Fazer login no STCS-W3 como paciente.
-#Como paciente
-#Eu quero fazer login no STCS-W3
-#Para realizar obter informações sobre minha saúde.
-Cenário: FG01b-C01 - Logar-se com sucesso
-Dado que o paciente está com sua identidade digital descentralizada ativa
-E na tela de login do STCS-W3,
-Quando o paciente aciona a opção de login,
-Então o STCS-W3 apresenta a tela com as funcionalidades disponíveis para o paciente.
-```
-```
 Funcionalidade: FG02 - Obter relatório de acesso ao registro de saúde
 #Como paciente
 #Eu quero obter um relatório dos acessos realizados ao meu registro de saúde
@@ -88,48 +77,18 @@ E o STCS-W3 apresenta para a mensagem de que o registro foi realizado com sucess
 ```
 
 ```
-Funcionalidade: FE03 - Acessar exame de pupilometria e diagnóstico de glaucoma anteriormente realizado.
+Funcionalidade: FE01 - Visualizar o mapa interno do INF
 
-#Como médico
-#Eu quero acessar e analisar exame de pupilometria realizado, que está na blockchain
-#Para conhecer o histórico de saúde do paciente.
-Cenário: FE03-C01 - Acessar o exame e diagnóstico sobre glaucoma na blockchain.
-Dado que o médico está logado no sistema
-E o paciente autorizou o médico acessar o exame e diagnóstico sobre glaucoma
-Quando o médico seleciona a opção analisar exame
-Então o exame de movimentos pupilares é apresentado para o médico analisar os resultados,
-podendo pausar, acelerar e retroceder nas imagens.
+Como usuário
+  -Eu quero poder acessar o mapa interno do Instituto de Informática e ver qual sala é qual.
+
+Cenário: FE01-C01 - Acessar o mapa do INF e encontrar a sala da coordenação do curso de Engenharia de Software.
 ```
 ```
-Funcionalidade: FE04 - realizar consulta médica remota
-#Como médico
-#Eu quero realizar uma consulta médica remota do paciente
-#Para realizar uma transferência de cuidado
-Cenário: FE04-C01 - Consultar registro eletrônico de saúde (RES) do paciente
-Dado que o médico está logado no sistema
-E vestindo óculos de realidade virtual e aumentada
-E o paciente possui RES na plataforma de blockchain
-E autorizou o médico a acessar o RES
-Quando o médico fornece a identificação do paciente
-Então o médico obtém o prontuário do paciente em uma interface imersiva
-Cenário: FE04-C02 - Obter um gêmeo digital do paciente em transferência de cuidado
-Dado que o médico está logado no sistema
-E vestindo óculos de realidade virtual e aumentada
-E o paciente em transferência está conectado aos sensores de sinais vitais
-Quando algum sinal vital monitorado pelos sensores atingir um nível crítico
-Então o sistema deve disparar um alarme visual e sonoro no ambiente de realidade virtual,
-E fornecer um rol de diagnósticos com base em aplicação de técnicas de inteligência
-artificial.
-```
-```
-Funcionalidade: FE05 - obter versão didática do P-avatar
-#Como paciente
-#Eu quero um relatório da minha saúde com base nos sensores que estou vestindo
-#Para saber minha condição médica
-Cenário: FE05-C01 - Acessar versão didática e simplificada do P-Avatar
-Dado que o paciente está logado no sistema
-E vestindo sensores de sinais vitais
-Quando o paciente solicita o relatório da sua condição de saúde
-Então o paciente obtém o relatório produzido com base em aplicação de técnicas de
-inteligência artificial.
+Funcionalidade: FE02 - Visualizar o mapa interno do CAB
+
+Como usuário
+  -Eu quero poder acessar o mapa interno do Centro de Aulas B e ver qual sala é qual.
+
+Cenário: FE02-C01 - Acessar o mapa do CAB e encontrar a sala 210.
 ```
