@@ -16,6 +16,26 @@ Dado que o usuário está com o aplicativo Indoor INF aberto, e na tela de login
 Quando o usuário aciona a opção de login,
 Então o Indoor INF apresenta a tela com as funcionalidades disponíveis para o usuário.
 
+
+Cenário: FG01-C02 - Logar-se sem sucesso
+
+Dado que o usuário está com o aplicativo Indoor INF aberto, e na tela de login,
+Quando o usuário aciona a opção de login,
+Então o Indoor INF apresenta uma mensagem de erro de autenticação por credenciais inválidas.
+
+
+Cenário: FG01-C03 - Logar-se sem sucesso
+
+Dado que o usuário está com o aplicativo Indoor INF aberto, e na tela de login,
+Quando o usuário aciona a opção de login,
+Então o Indoor INF apresenta uma mensagem de erro de autenticação por falta de conexão com a internet.
+
+
+Cenário: FG01-C04 - Logar-se sem sucesso
+
+Dado que o usuário está com o aplicativo Indoor INF aberto, e na tela de login,
+Quando o usuário aciona a opção de login,
+Então o Indoor INF para de funcionar inesperadamente.
 ```
 ```
 Funcionalidade: FG02 - Obter relatório de acesso ao registro de saúde
