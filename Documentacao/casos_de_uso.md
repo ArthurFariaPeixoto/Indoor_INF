@@ -1,21 +1,21 @@
-Indoor INF
+# Indoor INF
 
-Casos de uso e cenários
-Esta seção apresenta as histórias de usuários preliminares. Tais
-histórias contemplam todas as funcionalidades esperadas e retratam os resultados obtidos até
-o momento. Novas histórias serão desenvolvidas e as histórias apresentadas a seguir serão
-evoluídas conforme as necessidades do projeto.
+### Casos de uso e cenários
+Esta seção apresenta as histórias de usuários preliminares. Tais histórias contemplam todas as funcionalidades esperadas e retratam os resultados obtidos até o momento. Novas histórias serão desenvolvidas e as histórias apresentadas a seguir serão evoluídas conforme as necessidades do projeto.
 
 ```
-Funcionalidade: FG01a - Fazer login no STCS-W3 como médico.
-#Como médico
-#Eu quero fazer login no STCS-W3
-#Para realizar o meu trabalho de atendimento médico.
-Cenário: FG01a-C01 - Logar-se com sucesso
-Dado que o médico está com sua identidade digital descentralizada ativa
-E na tela de login do STCS-W3,
-Quando o médico aciona a opção de login,
-Então o STCS-W3 apresenta a tela com as funcionalidades disponíveis para o médico.
+Funcionalidade: FG01 - Fazer login no Indoor INF como usuário.
+
+- Como usuário
+- Eu quero fazer login no Indoor INF
+- Para chegar em algum lugar.
+
+Cenário: FG01-C01 - Logar-se com sucesso
+
+Dado que o usuário está com o aplicativo Indoor INF aberto, e na tela de login,
+Quando o usuário aciona a opção de login,
+Então o Indoor INF apresenta a tela com as funcionalidades disponíveis para o usuário.
+
 ```
 ```
 Funcionalidade: FG02 - Obter relatório de acesso ao registro de saúde
