@@ -1,0 +1,19 @@
+<!-- res/layout/activity_main.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Adicione um ImageView -->
+    <ImageView
+        android:id="@+id/mapImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/map_example" <!-- Substitua por seu recurso de imagem real -->
+    android:scaleType="fitXY"
+    android:clickable="true"/>
+
+    <!-- Outros elementos de layout podem ser adicionados aqui -->
+
+</RelativeLayout>
