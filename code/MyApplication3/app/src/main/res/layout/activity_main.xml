@@ -1,0 +1,46 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <com.example.myapplication.MyGraphView
+        android:id="@+id/graphView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/editTextStartNode" />
+
+    <EditText
+        android:id="@+id/editTextStartNode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:hint="Nó Inicial"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/editTextEndNode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextStartNode"
+        android:layout_marginBottom="16dp"
+        android:hint="Nó Final"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextEndNode"
+        android:layout_marginBottom="16dp"
+        android:text="Calcular"/>
+
+    <TextView
+        android:id="@+id/textViewDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonCalculate"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>
