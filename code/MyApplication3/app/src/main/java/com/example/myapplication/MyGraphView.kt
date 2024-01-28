@@ -35,6 +35,28 @@ class MyGraphView @JvmOverloads constructor(
         graph.addNode(8, 800f, 250f)
         graph.addNode(9, 900f, 100f)
         graph.addNode(10, 1000f, 300f)
+
+        // Crie as arestas entre os nós
+        graph.getNodes()[0].addNeighbor(graph.getNodes()[1])
+//        graph.getNodes()[0].addNeighbor(graph.getNodes()[9])
+        graph.getNodes()[1].addNeighbor(graph.getNodes()[0])
+        graph.getNodes()[1].addNeighbor(graph.getNodes()[2])
+        graph.getNodes()[2].addNeighbor(graph.getNodes()[1])
+        graph.getNodes()[2].addNeighbor(graph.getNodes()[3])
+        graph.getNodes()[3].addNeighbor(graph.getNodes()[2])
+        graph.getNodes()[3].addNeighbor(graph.getNodes()[4])
+        graph.getNodes()[4].addNeighbor(graph.getNodes()[3])
+        graph.getNodes()[4].addNeighbor(graph.getNodes()[5])
+        graph.getNodes()[5].addNeighbor(graph.getNodes()[4])
+        graph.getNodes()[5].addNeighbor(graph.getNodes()[6])
+        graph.getNodes()[6].addNeighbor(graph.getNodes()[5])
+        graph.getNodes()[6].addNeighbor(graph.getNodes()[7])
+        graph.getNodes()[7].addNeighbor(graph.getNodes()[6])
+        graph.getNodes()[7].addNeighbor(graph.getNodes()[8])
+        graph.getNodes()[8].addNeighbor(graph.getNodes()[7])
+        graph.getNodes()[8].addNeighbor(graph.getNodes()[9])
+        graph.getNodes()[9].addNeighbor(graph.getNodes()[8])
+//        graph.getNodes()[9].addNeighbor(graph.getNodes()[0])
     }
 
     fun setStartNode(index: Int) {

@@ -1,8 +1,8 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mapa_1"
     android:padding="16dp"
     tools:context=".MainActivity">
 
@@ -10,15 +10,17 @@
         android:id="@+id/graphView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/editTextStartNode" />
+        android:layout_above="@+id/editTextStartNode"
+        android:layout_marginBottom="406dp" />
 
     <EditText
         android:id="@+id/editTextStartNode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="74dp"
         android:hint="Nó Inicial"
-        android:inputType="number"/>
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/editTextEndNode"
@@ -27,20 +29,20 @@
         android:layout_above="@+id/editTextStartNode"
         android:layout_marginBottom="16dp"
         android:hint="Nó Final"
-        android:inputType="number"/>
+        android:inputType="number" />
 
     <Button
         android:id="@+id/buttonCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/editTextEndNode"
-        android:layout_marginBottom="16dp"
-        android:text="Calcular"/>
+        android:layout_marginBottom="-163dp"
+        android:text="Calcular" />
 
     <TextView
         android:id="@+id/textViewDistance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/buttonCalculate"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp" />
 </RelativeLayout>
