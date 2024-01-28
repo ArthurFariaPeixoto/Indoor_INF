@@ -2,22 +2,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mapa_1"
-    android:padding="16dp"
+
+    android:padding="1dp"
     tools:context=".MainActivity">
 
     <com.example.myapplication.MyGraphView
         android:id="@+id/graphView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="404dp"
+        android:layout_height="727dp"
         android:layout_above="@+id/editTextStartNode"
-        android:layout_marginBottom="406dp" />
+        android:layout_marginBottom="-64dp"
+        android:background="@drawable/mapa_1"
+        android:scaleType="fitXY" />
 
     <EditText
         android:id="@+id/editTextStartNode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:padding="16dp"
         android:layout_marginBottom="74dp"
         android:hint="Nó Inicial"
         android:inputType="number" />
@@ -26,6 +29,8 @@
         android:id="@+id/editTextEndNode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="16dp"
+
         android:layout_above="@+id/editTextStartNode"
         android:layout_marginBottom="16dp"
         android:hint="Nó Final"
@@ -36,7 +41,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/editTextEndNode"
-        android:layout_marginBottom="-163dp"
+
+        android:layout_marginBottom="-185dp"
+        android:padding="5dp"
         android:text="Calcular" />
 
     <TextView

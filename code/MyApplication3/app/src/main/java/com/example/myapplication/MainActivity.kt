@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             val startNode = editTextStartNode.text.toString().toIntOrNull()
             val endNode = editTextEndNode.text.toString().toIntOrNull()
 
-            if (startNode != null && endNode != null && startNode in 1..10 && endNode in 1..10) {
+            if (startNode != null && endNode != null) {
                 // Defina os nós inicial e final
                 graphView.setStartNode(startNode - 1)  // Subtrai 1 para corresponder ao índice do array
                 graphView.setEndNode(endNode - 1)      // Subtrai 1 para corresponder ao índice do array
