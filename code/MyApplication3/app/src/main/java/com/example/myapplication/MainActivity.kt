@@ -5,6 +5,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,27 +30,30 @@ class MainActivity : AppCompatActivity() {
             val endNode = editTextEndNode.text.toString().toIntOrNull()
 
             if (startNode != null && endNode != null) {
-                // Defina os nós inicial e final
-                graphView.setStartNode(startNode - 1)  // Subtrai 1 para corresponder ao índice do array
-                graphView.setEndNode(endNode - 1)      // Subtrai 1 para corresponder ao índice do array
+                if (isUserAuthenticated()) {
+                    // Defina os nós inicial e final
+                    graphView.setStartNode(startNode - 1)  // Subtrai 1 para corresponder ao índice do array
+                    graphView.setEndNode(endNode - 1)      // Subtrai 1 para corresponder ao índice do array
 
-                // Calcular o caminho mais curto
-                graphView.calculateShortestPath()
+                    // Calcular o caminho mais curto
+                    graphView.calculateShortestPath()
 
-                // Limpar texto da distância
-                textViewDistance.text = ""
+                    // Limpar texto da distância
+                    textViewDistance.text = ""
+                } else {
+                    // Tratar usuário não autenticado
+                    textViewDistance.text = "Você precisa estar autenticado para acessar o grafo."
+                }
             } else {
                 // Tratar entrada inválida
                 textViewDistance.text = "Entrada inválida. Insira valores entre 1 e 10."
             }
         }
     }
+
+    private fun isUserAuthenticated(): Boolean {
+        // Verificar se o usuário está autenticado usando FirebaseAuth
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        return currentUser != null
+    }
 }
-
-
-
-
-
-
-
-
