@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "961664993333",
+    "firebase_url": "https://fabio-72b2f-default-rtdb.firebaseio.com",
+    "project_id": "fabio-72b2f",
+    "storage_bucket": "fabio-72b2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961664993333:android:79e62cb927a9dfdc32897c",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961664993333-ek7gqtl44rt9ok07a83c9307dvquth5r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "98cf7d30bbf07488a1a92eb5500d5671de090b78"
+          }
+        },
+        {
+          "client_id": "961664993333-vs82h59g60a1ths1onfltik292nffh4v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2k9CL0Hx-uzkDKQGgUPXg3OCWwzOuWgU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "961664993333-vs82h59g60a1ths1onfltik292nffh4v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
