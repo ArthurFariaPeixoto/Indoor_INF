@@ -20,36 +20,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:padding="16dp"
-        android:layout_marginBottom="74dp"
+        android:layout_marginBottom="83dp"
         android:hint="Nó Inicial"
-        android:inputType="number" />
+        android:inputType="number"
+        android:padding="16dp" />
 
     <EditText
         android:id="@+id/editTextEndNode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:layout_above="@id/editTextStartNode"
 
-        android:layout_above="@+id/editTextStartNode"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="9dp"
         android:hint="Nó Final"
-        android:inputType="number" />
+        android:inputType="number"
+        android:padding="16dp" />
 
     <Button
         android:id="@+id/buttonCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/editTextEndNode"
-
-        android:layout_marginBottom="-185dp"
-        android:padding="5dp"
-        android:text="Calcular" />
+        android:layout_alignTop="@+id/editTextStartNode"
+        android:layout_marginTop="68dp"
+        android:background="#2d9bf0"
+        android:padding="8dp"
+        android:text="Calcular"
+        android:textColorLink="@color/white"
+        tools:visibility="visible" />
 
     <TextView
         android:id="@+id/textViewDistance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonCalculate"
-        android:layout_marginTop="16dp" />
+        android:layout_above="@+id/editTextEndNode"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="1dp"
+        android:textColor="#B80E0E" />
 </RelativeLayout>
