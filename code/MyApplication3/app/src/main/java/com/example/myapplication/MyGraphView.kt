@@ -1,11 +1,14 @@
 package com.example.myapplication
 
 
+import NfcActivity
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.nfc.NdefMessage
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 
 class MyGraphView @JvmOverloads constructor(
@@ -177,12 +180,12 @@ class MyGraphView @JvmOverloads constructor(
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
-        // Desenhe os nós do grafo
+        // Desenha os nós do grafo
         for (node in graph.getNodes()) {
             drawNode(canvas, node.x, node.y)
         }
 
-        // Desenhe as conexões entre os nós (apenas se o caminho não tiver sido calculado)
+        // Desenha as conexões entre os nós (apenas se o caminho não tiver sido calculado)
         if (pathCalculated) {
             val shortestPath = graph.getShortestPath()
             if (shortestPath.isNotEmpty()) {
@@ -208,6 +211,37 @@ class MyGraphView @JvmOverloads constructor(
 
         // Desenhe uma linha representando uma conexão entre os nós
         canvas.drawLine(startX, startY, endX, endY, paint)
+    }
+
+
+    // Método para atualizar o nó de saída com base na leitura da tag NFC
+    fun updateStartNodeFromNFC(message: NdefMessage) {
+        // Extrair a informação da mensagem NFC
+        val payload = message.records[0]?.payload
+        val tagInfo = java.lang.String(payload)
+
+        // lógica para mapear a informação lida para o índice do nó no seu grafo
+        val nodeIndex = mapTagInfoToNodeIndex(tagInfo.toString())
+
+        if (nodeIndex != null) {
+            setStartNode(nodeIndex)
+            Log.d("NFC", "Rota atualizada a partir da tag NFC: $nodeIndex")
+        } else {
+            Log.e("NFC", "Failed to map NFC tag info to node index")
+        }
+    }
+
+    // Método de mapeamento de informação da tag NFC para o índice do nó no grafo
+    private fun mapTagInfoToNodeIndex(tagInfo: String): Int? {
+        // lógica para mapear a informação lida da tag NFC para o índice do nó no grafo
+        // Retorna null se não conseguir mapear a informação para um nó específico
+        // Exemplo fictício:
+        return when (tagInfo) {
+            "147" -> 0
+            "142" -> 1
+            // Adicione mais mapeamentos conforme necessário
+            else -> null
+        }
     }
 }
 
