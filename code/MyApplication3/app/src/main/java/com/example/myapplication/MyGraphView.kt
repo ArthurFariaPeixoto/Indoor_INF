@@ -25,14 +25,14 @@ class MyGraphView @JvmOverloads constructor(
         paint.strokeWidth = 5f
 
         // Nós salas topo
-        graph.addNode(1, 230f, 360f)
-        graph.addNode(2, 360f, 360f)
-        graph.addNode(3, 230f, 510f)
-        graph.addNode(4, 360f, 450f)
-        graph.addNode(5, 230f, 650f)
-        graph.addNode(6, 360f, 550f)
-        graph.addNode(7, 360f, 650f)
-        graph.addNode(8, 360f, 800f)
+        graph.addNode(147, 230f, 360f)
+        graph.addNode(140, 360f, 360f)
+        graph.addNode(146, 230f, 510f)
+        graph.addNode(141, 360f, 450f)
+        graph.addNode(145, 230f, 650f)
+        graph.addNode(142, 360f, 550f)
+        graph.addNode(143, 360f, 650f)
+        graph.addNode(144, 360f, 800f)
 
         // Nós corredores topo e meio
         graph.addNode(9, 300f, 360f)
@@ -56,11 +56,11 @@ class MyGraphView @JvmOverloads constructor(
         graph.addNode(21, 900f, 1130f)
         graph.addNode(22, 940f, 1240f)
         graph.addNode(23, 900f, 1300f)
-        graph.addNode(24, 900f, 1400f)
-        graph.addNode(25, 730f, 1620f)
-        graph.addNode(26, 730f, 1680f)
-        graph.addNode(27, 900f, 1620f)
-        graph.addNode(28, 900f, 1680f)
+        graph.addNode(150, 900f, 1400f)
+        graph.addNode(154, 730f, 1620f)
+        graph.addNode(153, 730f, 1680f)
+        graph.addNode(151, 900f, 1620f)
+        graph.addNode(152, 900f, 1680f)
         graph.addNode(29, 815f, 1800f)
 
 
@@ -189,7 +189,7 @@ class MyGraphView @JvmOverloads constructor(
                 for (i in 0 until shortestPath.size - 1) {
                     val startNode = shortestPath[i]
                     val endNode = shortestPath[i + 1]
-                    drawConnection(canvas, startNode.x, startNode.y, endNode.x, endNode.y, Color.parseColor("#6750a4"), 15f)
+                    drawConnection(canvas, startNode.x, startNode.y, endNode.x, endNode.y, Color.parseColor("#2d9bf0"), 15f)
                 }
             }
         }
