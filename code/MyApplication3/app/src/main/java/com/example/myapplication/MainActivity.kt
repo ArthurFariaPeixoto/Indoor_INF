@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                 textViewDistance.text = ""
             } else {
                 // Tratar entrada inválida
-                textViewDistance.text = "Entrada inválida. Insira valores entre 1 e 10."
+                textViewDistance.text = "Entrada inválida."
             }
         }
     }
